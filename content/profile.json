@@ -1,0 +1,39 @@
+{
+  "name": "Dhananjai Chand",
+  "role": "Frontend Software Engineer at HubSpot",
+  "location": "New York, NY (EST)",
+  "email": "dcdevdhan@gmail.com",
+  "photo": "https://placehold.co/720x720/png?text=Dhananjai+Chand",
+  "about": [
+    "In the present era of rapidly advancing technology, my will to push the envelope beyond the maximum limit is what sets me apart. I continuously stay exposed through journals and forums, sharing knowledge with peers, seniors, and subject matter experts. I aspire to build software applications that make our lives more digital-friendly.",
+    "I pride myself on my dedicated and competitive nature, which has helped me succeed in my field. I thrive in a team environment and aim to lead with clarity and purpose. The task, regardless of its priority, always gets my undivided attention."
+  ],
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/dhananjai-chand/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/dhananjaichand98"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:dcdevdhan@gmail.com"
+    }
+  ],
+  "personality": [
+    {
+      "title": "Soccer",
+      "detail": "Tottenham Hotspur supporter"
+    },
+    {
+      "title": "Hiking",
+      "detail": "Yosemite, Channel Islands, Pinnacles"
+    },
+    {
+      "title": "Games",
+      "detail": "Rayman, Elden Ring"
+    }
+  ]
+}

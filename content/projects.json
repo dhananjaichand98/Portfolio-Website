@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Project Placeholder 01",
+    "summary": "High-impact frontend platform project placeholder. Replace with a concise problem, solution, and measurable result.",
+    "stack": ["Next.js", "TypeScript", "CSS"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Project Placeholder 02",
+    "summary": "Product-focused UI project placeholder emphasizing usability, performance, and accessibility outcomes.",
+    "stack": ["React", "Vite", "Testing Library"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Project Placeholder 03",
+    "summary": "Design-system component work placeholder including reusable patterns, docs, and consistency improvements.",
+    "stack": ["Storybook", "TypeScript", "SCSS"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Project Placeholder 04",
+    "summary": "Data-heavy dashboard placeholder with state management, charting, and interaction design.",
+    "stack": ["React", "TanStack Query", "Recharts"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Project Placeholder 05",
+    "summary": "Performance optimization project placeholder highlighting reduced bundle size and faster page loads.",
+    "stack": ["Next.js", "Lighthouse", "Web Vitals"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Project Placeholder 06",
+    "summary": "Accessibility-first implementation placeholder with improved semantics, keyboard support, and WCAG alignment.",
+    "stack": ["ARIA", "Playwright", "Axe"],
+    "status": "Placeholder",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  }
+]

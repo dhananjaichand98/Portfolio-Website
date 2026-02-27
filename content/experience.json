@@ -1,0 +1,46 @@
+[
+  {
+    "role": "Experience Placeholder 01",
+    "company": "Company Name",
+    "location": "City, State",
+    "dates": "Month YYYY - Present",
+    "highlights": [
+      "Add a measurable impact bullet here.",
+      "Add ownership and collaboration details here.",
+      "Add technical depth and outcome here."
+    ]
+  },
+  {
+    "role": "Experience Placeholder 02",
+    "company": "Company Name",
+    "location": "City, State",
+    "dates": "Month YYYY - Month YYYY",
+    "highlights": [
+      "Add a measurable impact bullet here.",
+      "Add ownership and collaboration details here.",
+      "Add technical depth and outcome here."
+    ]
+  },
+  {
+    "role": "Experience Placeholder 03",
+    "company": "Company Name",
+    "location": "City, State",
+    "dates": "Month YYYY - Month YYYY",
+    "highlights": [
+      "Add a measurable impact bullet here.",
+      "Add ownership and collaboration details here.",
+      "Add technical depth and outcome here."
+    ]
+  },
+  {
+    "role": "Experience Placeholder 04",
+    "company": "Company Name",
+    "location": "City, State",
+    "dates": "Month YYYY - Month YYYY",
+    "highlights": [
+      "Add a measurable impact bullet here.",
+      "Add ownership and collaboration details here.",
+      "Add technical depth and outcome here."
+    ]
+  }
+]
