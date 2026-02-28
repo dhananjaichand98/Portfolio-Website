@@ -1,46 +1,56 @@
 [
   {
-    "role": "Experience Placeholder 01",
-    "company": "Company Name",
-    "location": "City, State",
-    "dates": "Month YYYY - Present",
-    "highlights": [
-      "Add a measurable impact bullet here.",
-      "Add ownership and collaboration details here.",
-      "Add technical depth and outcome here."
-    ]
+    "role": "Software Engineer",
+    "company": "HubSpot",
+    "location": "Remote (New York, NY)",
+    "dates": "Aug 2024 - Present",
+    "logo": "/assets/logos/hubspot.svg",
+    "logoAlt": "HubSpot logo",
+    "story": "Leading frontend migration work at HubSpot, I built TypeScript and Node.js codemods that moved 200+ apps to a modern UI library, cutting manual effort by 60% and saving about four months. I also improved a plugin-based ESLint workflow that surfaced migration guidance and deadlines, reducing tracking overhead and migration errors across teams."
   },
   {
-    "role": "Experience Placeholder 02",
-    "company": "Company Name",
-    "location": "City, State",
-    "dates": "Month YYYY - Month YYYY",
-    "highlights": [
-      "Add a measurable impact bullet here.",
-      "Add ownership and collaboration details here.",
-      "Add technical depth and outcome here."
-    ]
+    "role": "Software Engineer",
+    "company": "Commure",
+    "location": "Mountain View, CA",
+    "dates": "Jul 2024 - Aug 2024",
+    "logo": "/assets/logos/commure.svg",
+    "logoAlt": "Commure logo",
+    "story": "At Commure, I owned full-stack delivery for a cloud-native EHR platform across React, FastAPI, and PostgreSQL. I shipped features like CPT autocomplete, provider profile management, note forwarding, and audit logs to improve documentation quality, traceability, and clinician onboarding speed."
   },
   {
-    "role": "Experience Placeholder 03",
-    "company": "Company Name",
-    "location": "City, State",
-    "dates": "Month YYYY - Month YYYY",
-    "highlights": [
-      "Add a measurable impact bullet here.",
-      "Add ownership and collaboration details here.",
-      "Add technical depth and outcome here."
-    ]
+    "role": "Software Engineer (P2)",
+    "company": "Tesla",
+    "location": "Fremont, CA",
+    "dates": "Jun 2023 - Jun 2024",
+    "logo": "/assets/logos/tesla.svg",
+    "logoAlt": "Tesla logo",
+    "story": "Tesla Watchlist became my core focus: I helped lead its global rollout to 1000+ locations used by 2500+ Security and HR stakeholders. I built the frontend architecture with React, TypeScript, Express, Webpack, and Redux, and delivered 10+ features, including role-based flows and multilingual support, driving strong QoQ adoption."
   },
   {
-    "role": "Experience Placeholder 04",
-    "company": "Company Name",
-    "location": "City, State",
-    "dates": "Month YYYY - Month YYYY",
-    "highlights": [
-      "Add a measurable impact bullet here.",
-      "Add ownership and collaboration details here.",
-      "Add technical depth and outcome here."
-    ]
+    "role": "Software Development Engineer III Intern",
+    "company": "Walmart",
+    "location": "Sunnyvale, CA",
+    "dates": "May 2022 - Aug 2022",
+    "logo": "/assets/logos/walmart.svg",
+    "logoAlt": "Walmart logo",
+    "story": "During my Walmart internship, I built a React + TypeScript design library with Nx and Storybook to improve UI consistency and team velocity. I documented 25+ interactive component stories and automated component audits, reducing maintenance overhead and making frontend development more predictable."
+  },
+  {
+    "role": "Associate Member of Technical Staff",
+    "company": "Salesforce",
+    "location": "Hyderabad, India",
+    "dates": "Jun 2020 - Jul 2021",
+    "logo": "/assets/logos/salesforce.svg",
+    "logoAlt": "Salesforce logo",
+    "story": "My AMTS role at Salesforce centered on a B2B CPQ platform spanning UI work, SDK integration, and release testing. I delivered key React/TypeScript product flows and supported Java/Spring Boot optimizations that improved API response times by 25%."
+  },
+  {
+    "role": "Software Engineering Intern",
+    "company": "Salesforce",
+    "location": "Hyderabad, India",
+    "dates": "May 2019 - Aug 2019",
+    "logo": "/assets/logos/salesforce.svg",
+    "logoAlt": "Salesforce logo",
+    "story": "As a Salesforce intern, I built a Python-based anomaly monitoring pipeline to improve visibility into database host health. I also created an analytics dashboard using Einstein integrations and actionable widgets, giving internal teams clearer operational insight."
   }
 ]
