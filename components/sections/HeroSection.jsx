@@ -2,7 +2,7 @@ export default function HeroSection({ profile, site }) {
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-text" data-reveal>
-        <p className="eyebrow">Open to frontend opportunities</p>
+        <p className="eyebrow">Open to Software and AI opportunities</p>
         <h1 id="hero-title">{profile.helloText || profile.name}</h1>
         <p className="hero-role">{site.heroTagline}</p>
         <p className="hero-subtitle">{site.heroSubtitle}</p>

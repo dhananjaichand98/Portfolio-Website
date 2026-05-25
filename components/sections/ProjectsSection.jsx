@@ -7,39 +7,34 @@ export default function ProjectsSection({ projects }) {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <article className="project-card" key={project.title} data-reveal>
-            <div className="project-header">
-              <h3>{project.title}</h3>
-              <span className="project-status">{project.status}</span>
-            </div>
+        {projects.map((project) => {
+          const hasSource = project.repoUrl && project.repoUrl !== "#";
 
-            <p>{project.summary}</p>
+          return (
+            <article className="project-card" key={project.title} data-reveal>
+              <div className="project-header">
+                <h3>{project.title}</h3>
+                <span className="project-status">{project.status}</span>
+              </div>
 
-            <ul className="stack-list" aria-label={`${project.title} tech stack`}>
-              {project.stack.map((tech, index) => (
-                <li key={`${project.title}-${index}-${tech}`}>{tech}</li>
-              ))}
-            </ul>
+              <p>{project.summary}</p>
 
-            <div className="project-links">
-              {project.demoUrl !== "#" ? (
-                <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                  Live Demo
-                </a>
-              ) : (
-                <span className="placeholder-link">Demo soon</span>
-              )}
-              {project.repoUrl !== "#" ? (
-                <a href={project.repoUrl} target="_blank" rel="noreferrer">
-                  Source
-                </a>
-              ) : (
-                <span className="placeholder-link">Source soon</span>
-              )}
-            </div>
-          </article>
-        ))}
+              <ul className="stack-list" aria-label={`${project.title} tech stack`}>
+                {project.stack.map((tech, index) => (
+                  <li key={`${project.title}-${index}-${tech}`}>{tech}</li>
+                ))}
+              </ul>
+
+              {hasSource ? (
+                <div className="project-links">
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer">
+                    Source
+                  </a>
+                </div>
+              ) : null}
+            </article>
+          );
+        })}
       </div>
     </section>
   );

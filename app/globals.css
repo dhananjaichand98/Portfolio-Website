@@ -285,10 +285,18 @@ html[data-theme="dark"] .nav-list a.is-active {
   font-weight: 600;
 }
 
+html[data-theme="dark"] .hero-role {
+  color: #cbd5e1;
+}
+
 .hero-subtitle {
   margin: 0;
   max-width: 58ch;
   color: var(--muted);
+}
+
+html[data-theme="dark"] .hero-subtitle {
+  color: #94a3b8;
 }
 
 .hero-actions {
@@ -443,9 +451,7 @@ html[data-theme="dark"] .contact-grid {
 
 .about-grid {
   margin-top: 1.6rem;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.2rem;
+  display: block;
 }
 
 .about-copy,
@@ -508,6 +514,8 @@ html[data-theme="dark"] .contact-grid {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -525,17 +533,30 @@ html[data-theme="dark"] .contact-grid {
 }
 
 .project-header h3 {
+  flex: 1;
   margin: 0;
+  min-width: 0;
   font-size: 1.08rem;
 }
 
 .project-status {
+  flex: 0 0 auto;
+  border: 1px solid transparent;
   border-radius: 999px;
-  padding: 0.2rem 0.55rem;
+  padding: 0.2rem 0.65rem;
   font-size: 0.76rem;
   font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
   color: #1e3a8a;
   background: rgba(59, 130, 246, 0.17);
+}
+
+html[data-theme="dark"] .project-status {
+  border-color: rgba(96, 165, 250, 0.28);
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.22);
 }
 
 .project-card p {
@@ -544,7 +565,7 @@ html[data-theme="dark"] .contact-grid {
 }
 
 .stack-list {
-  margin: 0;
+  margin: auto 0 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -782,6 +803,10 @@ html[data-theme="dark"] .experience-divider-line {
   color: #334155;
 }
 
+html[data-theme="dark"] .contact-form label {
+  color: #cbd5e1;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -795,8 +820,9 @@ html[data-theme="dark"] .experience-divider-line {
 
 html[data-theme="dark"] .contact-form input,
 html[data-theme="dark"] .contact-form textarea {
-  background: #0f172a;
-  border-color: #334155;
+  background: #111827;
+  border-color: #475569;
+  color: #e2e8f0;
 }
 
 .contact-form textarea {

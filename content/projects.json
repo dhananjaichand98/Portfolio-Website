@@ -1,49 +1,65 @@
 [
   {
-    "title": "Project Placeholder 01",
-    "summary": "High-impact frontend platform project placeholder. Replace with a concise problem, solution, and measurable result.",
-    "stack": ["Next.js", "TypeScript", "CSS"],
-    "status": "Placeholder",
+    "title": "Helping Hands",
+    "summary": "Built a web app focused on making support delivery to people in need more seamless and accessible by automating key coordination flows.",
+    "stack": ["Web App", "Automation", "Social Impact"],
+    "status": "Nov 2021",
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/dhananjaichand98/helping-hands"
+  },
+  {
+    "title": "Little Go Agent",
+    "summary": "Developed an AI agent for 5x5 Go using minimax with alpha-beta pruning and reinforcement-learning approaches; achieved a 100% win rate against random/aggressive/greedy/minimax baselines and an overall 95.9% win rate.",
+    "stack": ["Python", "Reinforcement Learning", "Minimax", "Alpha-Beta Pruning"],
+    "status": "Sep 2021 - Oct 2021",
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/dhananjaichand98/GO_GAME_BOT"
+  },
+  {
+    "title": "Support Systems for Driverless Cars",
+    "summary": "As part of my final-year B.Tech project, developed four AV support modules: pothole detection, traffic light signal/counter detection, potential vehicle-to-animal accident detection, and vehicular accident detection.",
+    "stack": ["Computer Vision", "Autonomous Vehicles", "Detection Systems"],
+    "status": "Aug 2019 - Jun 2020",
     "demoUrl": "#",
     "repoUrl": "#"
   },
   {
-    "title": "Project Placeholder 02",
-    "summary": "Product-focused UI project placeholder emphasizing usability, performance, and accessibility outcomes.",
-    "stack": ["React", "Vite", "Testing Library"],
-    "status": "Placeholder",
+    "title": "Instagram Hashtag Generation via Scene Understanding",
+    "summary": "Built a deep-learning engine that analyzes image scenes and generates Instagram-ready hashtags; won the Makerswave hackathon organized by Innovation Garage at NIT Warangal.",
+    "stack": ["Deep Learning", "Computer Vision", "NLP"],
+    "status": "Feb 2020",
     "demoUrl": "#",
     "repoUrl": "#"
   },
   {
-    "title": "Project Placeholder 03",
-    "summary": "Design-system component work placeholder including reusable patterns, docs, and consistency improvements.",
-    "stack": ["Storybook", "TypeScript", "SCSS"],
-    "status": "Placeholder",
+    "title": "Computer Vision-based Accident Detection in Traffic Surveillance",
+    "summary": "Conducted extensive research and implementation to design an efficient accident-detection algorithm for traffic surveillance camera feeds.",
+    "stack": ["Computer Vision", "Research", "Traffic Surveillance"],
+    "status": "Dec 2018 - Apr 2019",
     "demoUrl": "#",
     "repoUrl": "#"
   },
   {
-    "title": "Project Placeholder 04",
-    "summary": "Data-heavy dashboard placeholder with state management, charting, and interaction design.",
-    "stack": ["React", "TanStack Query", "Recharts"],
-    "status": "Placeholder",
+    "title": "ASL Recognizer using Arduino and Machine Learning",
+    "summary": "Developed a system using Computer Vision, ML, and Arduino to recognize ASL and translate gestures into spoken dialects; built a hardware setup with webcam, ultrasonic sensors, and servo motors to track hand movement, and won 1st place at INK Makeathon 2018 (350+ participants).",
+    "stack": ["Arduino", "Machine Learning", "Computer Vision", "Hardware Integration"],
+    "status": "Oct 2018",
     "demoUrl": "#",
     "repoUrl": "#"
   },
   {
-    "title": "Project Placeholder 05",
-    "summary": "Performance optimization project placeholder highlighting reduced bundle size and faster page loads.",
-    "stack": ["Next.js", "Lighthouse", "Web Vitals"],
-    "status": "Placeholder",
+    "title": "Flood Prediction Website",
+    "summary": "Built and deployed a live weather + ML flood prediction platform on Microsoft Azure using Flask, Geocoding API, and Weather API; secured 3rd rank at NIT Warangal in Microsoft Code.Fun.Do++ Hackathon.",
+    "stack": ["Flask", "Machine Learning", "Microsoft Azure", "APIs"],
+    "status": "Oct 2018",
     "demoUrl": "#",
     "repoUrl": "#"
   },
   {
-    "title": "Project Placeholder 06",
-    "summary": "Accessibility-first implementation placeholder with improved semantics, keyboard support, and WCAG alignment.",
-    "stack": ["ARIA", "Playwright", "Axe"],
-    "status": "Placeholder",
+    "title": "Space Swype",
+    "summary": "Built a 3D version of a classic 2D shooter in Unity with C#, with Microsoft Azure SQL backend integration for high scores and leaderboards as part of Microsoft Code.Fun.Do Hackathon.",
+    "stack": ["Unity 3D", "C#", "Azure SQL", "Game Development"],
+    "status": "Nov 2017",
     "demoUrl": "#",
     "repoUrl": "#"
   }
