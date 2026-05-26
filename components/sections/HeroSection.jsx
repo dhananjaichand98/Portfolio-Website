@@ -14,11 +14,6 @@ export default function HeroSection({ profile, site }) {
           <a className="btn btn-secondary" href={site.secondaryCta.href}>
             {site.secondaryCta.label}
           </a>
-          {site.resumeUrl ? (
-            <a className="btn btn-secondary" href={site.resumeUrl} download>
-              Resume
-            </a>
-          ) : null}
         </div>
 
         <ul className="social-list" aria-label="Social links">
@@ -37,6 +32,13 @@ export default function HeroSection({ profile, site }) {
               </li>
             );
           })}
+          {site.resumeUrl ? (
+            <li>
+              <a href={site.resumeUrl} download>
+                Resume
+              </a>
+            </li>
+          ) : null}
         </ul>
       </div>
 

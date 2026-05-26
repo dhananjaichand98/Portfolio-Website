@@ -1,0 +1,35 @@
+[
+  {
+    "school": "University of Southern California",
+    "degree": "Master's degree, Computer Science",
+    "dates": "Aug 2021 - May 2023",
+    "grade": "4.0",
+    "activities": "Computer Science Master's Student Honors Program",
+    "courses": [
+      "Foundations of Artificial Intelligence",
+      "Analysis of Algorithms",
+      "Web Technologies",
+      "Machine Learning for Data Science",
+      "Applied Natural Language Processing",
+      "Information Retrieval and Web Search Engines",
+      "Database Systems"
+    ]
+  },
+  {
+    "school": "National Institute of Technology Warangal",
+    "degree": "Bachelor of Technology, Computer Science and Engineering",
+    "dates": "Aug 2016 - Aug 2020",
+    "grade": "8.72/10",
+    "courses": [
+      "Machine Learning",
+      "Design and Analysis of Algorithms",
+      "Distributed Computing",
+      "Data Warehousing and Data Mining",
+      "Cryptography and Network Security",
+      "Game Theory",
+      "Operating Systems",
+      "Computer Networks",
+      "Wireless and Mobile Computing"
+    ]
+  }
+]

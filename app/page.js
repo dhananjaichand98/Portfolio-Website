@@ -3,6 +3,7 @@ import profile from "@/content/profile.json";
 import projects from "@/content/projects.json";
 import skills from "@/content/skills.json";
 import experience from "@/content/experience.json";
+import education from "@/content/education.json";
 import PortfolioPage from "@/components/PortfolioPage";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       projects={projects}
       skills={skills}
       experience={experience}
+      education={education}
     />
   );
 }

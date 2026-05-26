@@ -222,6 +222,33 @@ img {
   flex-wrap: wrap;
 }
 
+.nav-toggle {
+  display: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--text);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.24rem;
+}
+
+.nav-toggle span {
+  width: 1.05rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+html[data-theme="dark"] .nav-toggle {
+  background: rgba(15, 23, 42, 0.86);
+  border-color: rgba(71, 85, 105, 0.75);
+}
+
 .nav-list a {
   display: inline-block;
   text-decoration: none;
@@ -391,6 +418,7 @@ html[data-theme="dark"] .personality-card,
 html[data-theme="dark"] .project-card,
 html[data-theme="dark"] .skills-card,
 html[data-theme="dark"] .experience-card,
+html[data-theme="dark"] .education-card,
 html[data-theme="dark"] .contact-grid {
   background: rgba(15, 23, 42, 0.9);
   border-color: rgba(71, 85, 105, 0.72);
@@ -459,6 +487,7 @@ html[data-theme="dark"] .contact-grid {
 .project-card,
 .skills-card,
 .experience-card,
+.education-card,
 .contact-grid {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(216, 222, 235, 0.9);
@@ -541,22 +570,10 @@ html[data-theme="dark"] .contact-grid {
 
 .project-status {
   flex: 0 0 auto;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 0.2rem 0.65rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
   white-space: nowrap;
-  color: #1e3a8a;
-  background: rgba(59, 130, 246, 0.17);
-}
-
-html[data-theme="dark"] .project-status {
-  border-color: rgba(96, 165, 250, 0.28);
-  color: #bfdbfe;
-  background: rgba(37, 99, 235, 0.22);
 }
 
 .project-card p {
@@ -776,6 +793,104 @@ html[data-theme="dark"] .experience-divider-line {
   transform: translateY(-50%);
 }
 
+.education-list {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.education-card {
+  padding: 1rem 1.1rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.education-header h3,
+.education-header p,
+.education-header span,
+.education-meta-list,
+.education-meta-list dd,
+.education-courses p {
+  margin: 0;
+}
+
+.education-header h3 {
+  font-size: 1.08rem;
+}
+
+.education-header p,
+.education-header span,
+.education-meta-list dt {
+  color: var(--muted);
+}
+
+.education-header span {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.education-meta-list {
+  margin-top: 0.85rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.education-meta-list div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.7rem;
+}
+
+.education-meta-list dt {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.education-meta-list dd {
+  color: var(--text);
+}
+
+.education-courses {
+  margin-top: 0.95rem;
+}
+
+.education-courses p {
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.education-courses ul {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.education-courses li {
+  border-radius: 999px;
+  border: 1px solid #c8d4f0;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.2rem 0.48rem;
+}
+
+html[data-theme="dark"] .education-courses li {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(96, 165, 250, 0.42);
+  color: #bfdbfe;
+}
+
 .contact-grid {
   margin-top: 1.6rem;
   padding: 1.1rem;
@@ -872,16 +987,63 @@ html[data-theme="dark"] .contact-form textarea {
   }
 
   .top-nav {
-    border-radius: 18px;
+    border-radius: 28px;
     padding: 0.78rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    order: 1;
+  }
+
+  .brand-link {
+    order: 2;
+  }
+
+  .top-nav nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  .top-nav nav.is-open {
+    display: block;
   }
 
   .nav-list {
     width: 100%;
-    order: 3;
+    padding-top: 0.65rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-list li + li {
+    border-top: 1px solid rgba(216, 222, 235, 0.72);
+  }
+
+  html[data-theme="dark"] .nav-list li + li {
+    border-color: rgba(71, 85, 105, 0.72);
+  }
+
+  .nav-list a {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    padding: 0.82rem 0.15rem;
+    background: transparent;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus-visible,
+  .nav-list a.is-active,
+  html[data-theme="dark"] .nav-list a:hover,
+  html[data-theme="dark"] .nav-list a:focus-visible,
+  html[data-theme="dark"] .nav-list a.is-active {
+    background: transparent;
+    color: var(--blue);
   }
 
   .hero {
@@ -907,6 +1069,14 @@ html[data-theme="dark"] .contact-form textarea {
     text-align: center;
   }
 
+  .hero-text .social-list {
+    justify-content: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
   .theme-pull {
     right: 2.9rem;
   }
@@ -925,6 +1095,20 @@ html[data-theme="dark"] .contact-form textarea {
 
   .experience-dates {
     white-space: normal;
+  }
+
+  .education-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .education-header span {
+    white-space: normal;
+  }
+
+  .education-meta-list div {
+    grid-template-columns: 1fr;
+    gap: 0.05rem;
   }
 
 }
