@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1220"/>
+  <circle cx="976" cy="168" r="92" fill="#dbeafe"/>
+  <text x="976" y="205" text-anchor="middle" font-size="132">👋</text>
+  <circle cx="156" cy="488" r="8" fill="#14b8a6"/>
+  <text x="150" y="230" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800">Dhananjai Chand</text>
+  <text x="154" y="304" fill="#93c5fd" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Frontend Software Engineer</text>
+  <text x="154" y="374" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="32">Polished, accessible, performant user interfaces</text>
+  <text x="154" y="426" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="32">built for users and scalable teams.</text>
+  <text x="182" y="500" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">dhananjaichand.com</text>
+</svg>

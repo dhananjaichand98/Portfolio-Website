@@ -17,26 +17,41 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || site.siteUrl;
+const siteDescription =
+  "Frontend Software Engineer portfolio featuring projects, experience, and design-forward web work.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: site.siteName,
-  description:
-    "Frontend Software Engineer portfolio featuring projects, experience, and design-forward web work.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/"
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/assets/apple-touch-icon.png"
+  },
   openGraph: {
     title: site.siteName,
-    description:
-      "Frontend Software Engineer portfolio featuring projects, experience, and design-forward web work.",
+    description: siteDescription,
     url: siteUrl,
     siteName: site.siteName,
+    images: [
+      {
+        url: "/assets/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dhananjai Chand portfolio preview"
+      }
+    ],
     locale: "en_US",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: site.siteName,
-    description:
-      "Frontend Software Engineer portfolio featuring projects, experience, and design-forward web work."
+    description: siteDescription,
+    images: ["/assets/og-image.png"]
   }
 };
 

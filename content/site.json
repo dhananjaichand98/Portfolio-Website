@@ -11,7 +11,8 @@
     "label": "Contact Me",
     "href": "#contact"
   },
-  "formspreeEndpoint": "https://formspree.io/f/your-form-id",
+  "resumeUrl": "/assets/dhananjai-chand-resume.pdf",
+  "formspreeEndpoint": "https://formspree.io/f/xwvzrwzj",
   "navigation": [
     {
       "label": "About",
