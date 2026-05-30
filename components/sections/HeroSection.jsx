@@ -1,9 +1,10 @@
 export default function HeroSection({ profile, site }) {
   return (
-    <section className="hero" aria-labelledby="hero-title">
-      <div className="hero-text" data-reveal>
-        <p className="eyebrow">Open to Software and AI opportunities</p>
-        <h1 id="hero-title">{profile.helloText || profile.name}</h1>
+    <section id="start" className="hero field-hero" aria-labelledby="hero-title">
+      <div className="hero-copy" data-reveal>
+        <p className="eyebrow">Field notes from a frontend systems builder</p>
+        <h1 id="hero-title">{profile.thesis || profile.name}</h1>
+        <p className="hero-intro">{profile.intro}</p>
         <p className="hero-role">{site.heroTagline}</p>
         <p className="hero-subtitle">{site.heroSubtitle}</p>
 
@@ -16,7 +17,7 @@ export default function HeroSection({ profile, site }) {
           </a>
         </div>
 
-        <ul className="social-list" aria-label="Social links">
+        <ul className="social-list hero-links" aria-label="Social links">
           {profile.socials.map((social) => {
             const external = social.url.startsWith("http");
 
@@ -42,13 +43,32 @@ export default function HeroSection({ profile, site }) {
         </ul>
       </div>
 
-      <div className="hero-visual" data-reveal>
-        <article className="profile-card">
+      <div className="hero-visual field-visual" data-reveal>
+        <figure className="hero-photo">
           <img src={profile.photo} alt={`${profile.name} profile portrait`} />
-          <div className="profile-meta">
-            <p>{profile.location}</p>
-          </div>
-        </article>
+          <figcaption>
+            <span>{profile.location}</span>
+            <p>{profile.photoCaption}</p>
+          </figcaption>
+        </figure>
+
+        <div className="photo-slot-grid" aria-label="Future photo slots">
+          {profile.photoSlots.map((slot) => (
+            <article className="photo-slot" key={slot.label}>
+              <span>{slot.label}</span>
+              <p>{slot.detail}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="signal-board" aria-label="Current signals" data-reveal>
+        {profile.signals.map((signal) => (
+          <article className="signal-tile" key={signal.label}>
+            <span>{signal.label}</span>
+            <strong>{signal.value}</strong>
+          </article>
+        ))}
       </div>
     </section>
   );

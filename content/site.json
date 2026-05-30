@@ -1,42 +1,42 @@
 {
   "siteName": "Dhananjai Chand | Frontend Software Engineer",
   "siteUrl": "https://dhananjaichand.com",
-  "heroTagline": "Software Engineer at HubSpot",
-  "heroSubtitle": "I build polished, accessible, and performant user interfaces that feel simple for users and scalable for teams.",
+  "heroTagline": "I'm Dhananjai Chand, a frontend engineer at HubSpot with a systems brain.",
+  "heroSubtitle": "I turn tangled product systems into interfaces, migrations, and team workflows that feel calm under pressure.",
   "primaryCta": {
-    "label": "View Projects",
-    "href": "#projects"
+    "label": "Enter the Notes",
+    "href": "#story"
   },
   "secondaryCta": {
-    "label": "Contact Me",
+    "label": "Open Channel",
     "href": "#contact"
   },
   "resumeUrl": "/assets/dhananjai-chand-resume.pdf",
   "formspreeEndpoint": "https://formspree.io/f/xwvzrwzj",
   "navigation": [
     {
-      "label": "About",
-      "href": "#about"
+      "label": "Signal",
+      "href": "#start"
     },
     {
-      "label": "Projects",
+      "label": "Origin",
+      "href": "#story"
+    },
+    {
+      "label": "Chapters",
+      "href": "#work"
+    },
+    {
+      "label": "Cases",
       "href": "#projects"
     },
     {
-      "label": "Skills",
-      "href": "#skills"
+      "label": "Research",
+      "href": "#research"
     },
     {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Publications",
-      "href": "#publications"
-    },
-    {
-      "label": "Education",
-      "href": "#education"
+      "label": "Offscreen",
+      "href": "#personal"
     },
     {
       "label": "Contact",

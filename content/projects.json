@@ -1,7 +1,10 @@
 [
   {
     "title": "Helping Hands",
+    "angle": "The one about coordination and dignity.",
+    "question": "How do you make support delivery easier without making the process feel cold?",
     "summary": "Built a web app focused on making support delivery to people in need more seamless and accessible by automating key coordination flows.",
+    "lesson": "This is where I started thinking less about screens and more about the human handoff behind them.",
     "stack": ["Web App", "Automation", "Social Impact"],
     "status": "Nov 2021",
     "demoUrl": "#",
@@ -9,7 +12,10 @@
   },
   {
     "title": "Little Go Agent",
+    "angle": "The one where strategy became code.",
+    "question": "What does good decision-making look like when the board is small but the branching factor is not?",
     "summary": "Developed an AI agent for 5x5 Go using minimax with alpha-beta pruning and reinforcement-learning approaches; achieved a 100% win rate against random/aggressive/greedy/minimax baselines and an overall 95.9% win rate.",
+    "lesson": "A small board turned into a clean lesson in search, tradeoffs, and knowing when a model has enough information to act.",
     "stack": ["Python", "Reinforcement Learning", "Minimax", "Alpha-Beta Pruning"],
     "status": "Sep 2021 - Oct 2021",
     "demoUrl": "#",
@@ -17,7 +23,10 @@
   },
   {
     "title": "Support Systems for Driverless Cars",
+    "angle": "The one that pulled research into the road.",
+    "question": "What does a support system need to notice before the human does?",
     "summary": "As part of my final-year B.Tech project, developed four AV support modules: pothole detection, traffic light signal/counter detection, potential vehicle-to-animal accident detection, and vehicular accident detection.",
+    "lesson": "It taught me to think in failure states: what needs to be noticed, when, and how clearly the system should respond.",
     "stack": ["Computer Vision", "Autonomous Vehicles", "Detection Systems"],
     "status": "Aug 2019 - Jun 2020",
     "demoUrl": "#",
@@ -25,7 +34,10 @@
   },
   {
     "title": "Instagram Hashtag Generation via Scene Understanding",
+    "angle": "The hackathon one.",
+    "question": "Can a model read a scene well enough to turn it into shareable language?",
     "summary": "Built a deep-learning engine that analyzes image scenes and generates Instagram-ready hashtags; won the Makerswave hackathon organized by Innovation Garage at NIT Warangal.",
+    "lesson": "Fast prototypes are useful when they make the idea tangible enough for people to react to.",
     "stack": ["Deep Learning", "Computer Vision", "NLP"],
     "status": "Feb 2020",
     "demoUrl": "#",

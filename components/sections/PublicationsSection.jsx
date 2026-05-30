@@ -14,15 +14,21 @@ function renderAuthors(authors) {
   ));
 }
 
-export default function PublicationsSection({ publications }) {
+export default function PublicationsSection({ publications, education }) {
   return (
-    <section id="publications" className="content-section" aria-labelledby="publications-title">
+    <section id="research" className="content-section research-section" aria-labelledby="research-title">
       <div className="section-heading" data-reveal>
-        <p className="eyebrow">Publications</p>
-        <h2 id="publications-title">Research work</h2>
+        <p className="eyebrow">Research Wall</p>
+        <h2 id="research-title">Before product systems, I was studying what machines can notice.</h2>
       </div>
 
-      <div className="publications-list">
+      <p className="section-lede" data-reveal>
+        My early work sat at the intersection of computer vision, road safety, and autonomous
+        vehicle support systems. That research background still shapes how I think about signals,
+        edge cases, and feedback loops in product interfaces.
+      </p>
+
+      <div className="research-wall">
         {publications.map((item) => (
           <article className="publication-card" key={`${item.title}-${item.date}`} data-reveal>
             <div className="publication-header">
@@ -53,6 +59,16 @@ export default function PublicationsSection({ publications }) {
                 </a>
               ) : null}
             </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="education-strip" data-reveal aria-label="Education">
+        {education.map((item) => (
+          <article className="education-card" key={`${item.school}-${item.dates}`}>
+            <span>{item.dates}</span>
+            <h3>{item.school}</h3>
+            <p>{item.degree}</p>
           </article>
         ))}
       </div>

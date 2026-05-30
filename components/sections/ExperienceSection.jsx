@@ -8,53 +8,59 @@ export default function ExperienceSection({ experience }) {
       .join("");
 
   return (
-    <section id="experience" className="content-section" aria-labelledby="experience-title">
+    <section id="work" className="content-section chapters-section" aria-labelledby="work-title">
       <div className="section-heading" data-reveal>
-        <p className="eyebrow">Experience</p>
-        <h2 id="experience-title">Career timeline</h2>
+        <p className="eyebrow">Chapters</p>
+        <h2 id="work-title">A career is just a trail of problems you learned how to read.</h2>
       </div>
 
-      <div className="experience-list">
+      <ol className="chapter-list">
         {experience.map((item, index) => (
-          <div className="experience-item" key={`${item.role}-${item.company}-${item.dates}`}>
-            <article className="experience-card" data-reveal>
-              <div className="experience-company">
+          <li className="chapter-item" key={`${item.role}-${item.company}-${item.dates}`}>
+            <article className="chapter-card" data-reveal>
+              <div className="chapter-index" aria-hidden="true">
+                {String(experience.length - index).padStart(2, "0")}
+              </div>
+
+              <div className="chapter-company">
                 {item.logo ? (
                   <img
-                    className="experience-logo"
+                    className="chapter-logo"
                     src={item.logo}
                     alt={item.logoAlt || `${item.company} logo`}
                   />
                 ) : (
-                  <div className="experience-logo-fallback" aria-hidden="true">
+                  <div className="chapter-logo-fallback" aria-hidden="true">
                     {initialsFromCompany(item.company)}
                   </div>
                 )}
-                <div className="experience-company-info">
-                  <div className="experience-company-top">
-                    <p className="experience-company-name">{item.company}</p>
-                    <p className="experience-dates">{item.dates}</p>
+                <div className="chapter-company-info">
+                  <div className="chapter-company-top">
+                    <p className="chapter-company-name">{item.company}</p>
+                    <p className="chapter-dates">{item.dates}</p>
                   </div>
-                  <p className="experience-meta">{item.location}</p>
+                  <p className="chapter-meta">{item.role} / {item.location}</p>
                 </div>
               </div>
-              <div className="experience-header">
-                <h3>{item.role}</h3>
-              </div>
-              <p className="experience-story">
-                {item.story || (item.highlights ? item.highlights.join(" ") : "")}
-              </p>
-            </article>
 
-            {index < experience.length - 1 ? (
-              <div className="experience-divider" aria-hidden="true" data-reveal>
-                <span className="experience-divider-line" />
-                <span className="experience-divider-dot" />
+              <div className="chapter-body">
+                <h3>{item.chapter || item.role}</h3>
+                {item.focus ? <p className="chapter-focus">{item.focus}</p> : null}
+                <p className="chapter-story">
+                  {item.story || (item.highlights ? item.highlights.join(" ") : "")}
+                </p>
               </div>
-            ) : null}
-          </div>
+
+              {item.lesson ? (
+                <aside className="chapter-lesson">
+                  <span>Field note</span>
+                  <p>{item.lesson}</p>
+                </aside>
+              ) : null}
+            </article>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

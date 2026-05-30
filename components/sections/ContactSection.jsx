@@ -2,17 +2,17 @@ import { Button, Form, Input, Label, TextArea, TextField } from "react-aria-comp
 
 export default function ContactSection({ profile, site, formConfigured }) {
   return (
-    <section id="contact" className="content-section" aria-labelledby="contact-title">
+    <section id="contact" className="content-section contact-section" aria-labelledby="contact-title">
       <div className="section-heading" data-reveal>
-        <p className="eyebrow">Contact</p>
-        <h2 id="contact-title">Let&apos;s build something meaningful</h2>
+        <p className="eyebrow">Open Channel</p>
+        <h2 id="contact-title">Bring me the messy version.</h2>
       </div>
 
       <div className="contact-grid" data-reveal>
         <div className="contact-copy">
           <p>
-            Reach out for frontend engineering opportunities, product collaboration, or
-            conversations around UX and performance.
+            Reach out for frontend engineering opportunities, product collaboration, or a good
+            conversation about making complicated tools feel easier to use.
           </p>
           <p>
             Prefer email? <a href={`mailto:${profile.email}`}>{profile.email}</a>

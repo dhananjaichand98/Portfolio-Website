@@ -6,9 +6,9 @@ import TopNav from "@/components/TopNav";
 import ThemeBulbToggle from "@/components/ThemeBulbToggle";
 import AboutSection from "@/components/sections/AboutSection";
 import ContactSection from "@/components/sections/ContactSection";
-import EducationSection from "@/components/sections/EducationSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import HeroSection from "@/components/sections/HeroSection";
+import PersonalSection from "@/components/sections/PersonalSection";
 import PublicationsSection from "@/components/sections/PublicationsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -32,8 +32,8 @@ function setupRevealObserver() {
       });
     },
     {
-      threshold: 0.2,
-      rootMargin: "0px 0px -8% 0px"
+      threshold: 0.01,
+      rootMargin: "0px"
     }
   );
 
@@ -44,22 +44,30 @@ function setupRevealObserver() {
 function setupActiveSectionObserver(setActiveSection) {
   const sections = Array.from(document.querySelectorAll("section[id]"));
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    },
-    {
-      threshold: 0.35,
-      rootMargin: "-20% 0px -40% 0px"
-    }
-  );
+  const updateActiveSection = () => {
+    const readingLine = Math.min(window.innerHeight * 0.68, 520);
+    const currentSection =
+      sections
+        .map((section) => ({
+          id: section.id,
+          distance: section.getBoundingClientRect().top - readingLine
+        }))
+        .filter((section) => section.distance <= 0)
+        .sort((a, b) => b.distance - a.distance)[0] || sections[0];
 
-  sections.forEach((section) => observer.observe(section));
-  return () => observer.disconnect();
+    if (currentSection?.id) {
+      setActiveSection(currentSection.id);
+    }
+  };
+
+  updateActiveSection();
+  window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("resize", updateActiveSection);
+
+  return () => {
+    window.removeEventListener("scroll", updateActiveSection);
+    window.removeEventListener("resize", updateActiveSection);
+  };
 }
 
 export default function PortfolioPage({
@@ -71,7 +79,7 @@ export default function PortfolioPage({
   publications,
   education
 }) {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("start");
   const [theme, setTheme] = useState("light");
 
   const formConfigured = useMemo(
@@ -106,11 +114,11 @@ export default function PortfolioPage({
       <main id="top">
         <HeroSection profile={profile} site={site} />
         <AboutSection profile={profile} />
+        <ExperienceSection experience={experience} />
         <ProjectsSection projects={projects} />
         <SkillsSection skills={skills} />
-        <ExperienceSection experience={experience} />
-        <PublicationsSection publications={publications} />
-        <EducationSection education={education} />
+        <PublicationsSection publications={publications} education={education} />
+        <PersonalSection profile={profile} />
         <ContactSection profile={profile} site={site} formConfigured={formConfigured} />
       </main>
 

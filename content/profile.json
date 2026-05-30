@@ -1,12 +1,58 @@
 {
   "name": "Dhananjai Chand",
-  "helloText" : "Hey, I'm DC! 👋",
+  "helloText": "Hey, I'm DC.",
   "location": "New York, NY (EST)",
   "email": "dcdevdhan@gmail.com",
   "photo": "/assets/profile-photo.jpg",
+  "photoCaption": "A hiking photo because most of my best thinking happens away from a screen.",
+  "intro": "I turn dense product systems into calm, dependable interfaces.",
+  "thesis": "I build calm software for complicated rooms.",
+  "signals": [
+    {
+      "label": "Current chapter",
+      "value": "HubSpot migration systems"
+    },
+    {
+      "label": "Home base",
+      "value": "New York, EST"
+    },
+    {
+      "label": "Recurring pattern",
+      "value": "Complexity into clarity"
+    }
+  ],
+  "photoSlots": [
+    {
+      "label": "Trail snapshot",
+      "detail": "Add a hiking photo that feels less posed and more in-motion."
+    },
+    {
+      "label": "Work surface",
+      "detail": "Add a desk, notebook, whiteboard, or setup photo."
+    },
+    {
+      "label": "Match day",
+      "detail": "Add something Tottenham, if you want the optimism on record."
+    }
+  ],
   "about": [
-    "In the present era of rapidly advancing technology, my will to push the envelope beyond the maximum limit is what sets me apart. I continuously stay exposed through journals and forums, sharing knowledge with peers, seniors, and subject matter experts. I aspire to build software applications that make our lives more digital-friendly.",
-    "I pride myself on my dedicated and competitive nature, which has helped me succeed in my field. I thrive in a team environment and aim to lead with clarity and purpose. The task, regardless of its priority, always gets my undivided attention."
+    "The thread through my work is pretty consistent: I like walking into complicated systems, finding the shape underneath the mess, and making the next person feel less friction than I did.",
+    "That has taken a few forms: migration tooling at HubSpot, security workflows at Tesla, healthcare product work at Commure, design systems at Walmart, CPQ flows at Salesforce, and earlier research in computer vision. Different domains, same instinct.",
+    "I care about software that feels thoughtful in the small moments: clearer states, fewer confusing paths, better defaults, sharper feedback, and codebases that give teams room to move."
+  ],
+  "principles": [
+    {
+      "title": "Make the system legible",
+      "detail": "Whether it is a UI migration or a product workflow, I try to expose the real structure so teams can make decisions without guesswork."
+    },
+    {
+      "title": "Keep the user in the room",
+      "detail": "I am happiest when engineering details disappear into an interface that feels obvious, fast, and hard to misuse."
+    },
+    {
+      "title": "Leave better trails",
+      "detail": "Docs, codemods, component stories, lint rules, and dashboards are all part of the same habit: help the next person move faster."
+    }
   ],
   "socials": [
     {
@@ -25,15 +71,15 @@
   "personality": [
     {
       "title": "Soccer",
-      "detail": "Tottenham Hotspur supporter"
+      "detail": "Tottenham Hotspur supporter, which has taught me unreasonable optimism."
     },
     {
       "title": "Hiking",
-      "detail": "Yosemite, Channel Islands, Pinnacles"
+      "detail": "Yosemite, Channel Islands, Pinnacles, and any trail that gives my brain room to reorganize itself."
     },
     {
       "title": "Games",
-      "detail": "Rayman, Elden Ring"
+      "detail": "Rayman and Elden Ring, for very different definitions of joy."
     }
   ]
 }
