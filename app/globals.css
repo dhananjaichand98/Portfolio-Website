@@ -418,6 +418,7 @@ html[data-theme="dark"] .personality-card,
 html[data-theme="dark"] .project-card,
 html[data-theme="dark"] .skills-card,
 html[data-theme="dark"] .experience-card,
+html[data-theme="dark"] .publication-card,
 html[data-theme="dark"] .education-card,
 html[data-theme="dark"] .contact-grid {
   background: rgba(15, 23, 42, 0.9);
@@ -487,6 +488,7 @@ html[data-theme="dark"] .contact-grid {
 .project-card,
 .skills-card,
 .experience-card,
+.publication-card,
 .education-card,
 .contact-grid {
   background: rgba(255, 255, 255, 0.86);
@@ -791,6 +793,118 @@ html[data-theme="dark"] .experience-divider-line {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.publications-list {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.publication-card {
+  padding: 1rem 1.1rem;
+}
+
+.publication-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.publication-header h3,
+.publication-header p,
+.publication-header span,
+.publication-meta,
+.publication-summary,
+.publication-tags {
+  margin: 0;
+}
+
+.publication-header h3 {
+  font-size: 1.08rem;
+}
+
+.publication-header p,
+.publication-header span,
+.publication-meta {
+  color: var(--muted);
+}
+
+.publication-header strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.publication-header span {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.publication-meta {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.publication-meta span {
+  display: block;
+  margin-top: 0.12rem;
+  font-weight: 500;
+}
+
+.publication-summary {
+  margin-top: 0.7rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.publication-footer {
+  margin-top: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+
+.publication-tags {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.publication-tags li {
+  border-radius: 999px;
+  border: 1px solid #c8d4f0;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.2rem 0.48rem;
+}
+
+html[data-theme="dark"] .publication-tags li {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(96, 165, 250, 0.42);
+  color: #bfdbfe;
+}
+
+.publication-link {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.publication-link:hover,
+.publication-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .education-list {
@@ -1102,6 +1216,13 @@ html[data-theme="dark"] .contact-form textarea {
     gap: 0.25rem;
   }
 
+  .publication-header,
+  .publication-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-header span,
   .education-header span {
     white-space: normal;
   }

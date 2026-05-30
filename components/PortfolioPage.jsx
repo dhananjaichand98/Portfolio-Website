@@ -9,6 +9,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import EducationSection from "@/components/sections/EducationSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import HeroSection from "@/components/sections/HeroSection";
+import PublicationsSection from "@/components/sections/PublicationsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 
@@ -61,7 +62,15 @@ function setupActiveSectionObserver(setActiveSection) {
   return () => observer.disconnect();
 }
 
-export default function PortfolioPage({ site, profile, projects, skills, experience, education }) {
+export default function PortfolioPage({
+  site,
+  profile,
+  projects,
+  skills,
+  experience,
+  publications,
+  education
+}) {
   const [activeSection, setActiveSection] = useState("about");
   const [theme, setTheme] = useState("light");
 
@@ -100,6 +109,7 @@ export default function PortfolioPage({ site, profile, projects, skills, experie
         <ProjectsSection projects={projects} />
         <SkillsSection skills={skills} />
         <ExperienceSection experience={experience} />
+        <PublicationsSection publications={publications} />
         <EducationSection education={education} />
         <ContactSection profile={profile} site={site} formConfigured={formConfigured} />
       </main>

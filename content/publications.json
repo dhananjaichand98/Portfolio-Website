@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Computer Vision-based Accident Detection in Traffic Surveillance",
+    "authors": "Earnest Paul Ijjina, Dhananjai Chand, Savyasachi Gupta, Goutham K",
+    "venue": "10th International Conference on Computing, Communication and Networking Technologies",
+    "publication": "ICCCNT 2019, pp. 1-6",
+    "date": "2019",
+    "summary": "A road-accident detection framework for traffic surveillance footage using Mask R-CNN object detection, centroid-based tracking, and trajectory anomaly analysis.",
+    "url": "https://arxiv.org/abs/1911.10037",
+    "tags": ["Computer Vision", "Traffic Surveillance", "Accident Detection"]
+  },
+  {
+    "title": "Computer Vision-based Accident Detection for Autonomous Vehicles",
+    "authors": "Dhananjai Chand, Savyasachi Gupta, Ilaiah Kavati",
+    "venue": "2020 IEEE 17th India Council International Conference",
+    "publication": "INDICON 2020, pp. 1-6",
+    "date": "2020",
+    "summary": "A dashboard-camera support system for self-driving cars that tracks vehicles and analyzes speed, acceleration, and trajectory signals to detect accidents.",
+    "url": "https://arxiv.org/abs/2012.10870",
+    "tags": ["Computer Vision", "Autonomous Vehicles", "Accident Detection"]
+  },
+  {
+    "title": "Computer Vision-based Animal Collision Avoidance Framework for Autonomous Vehicles",
+    "authors": "Savyasachi Gupta, Dhananjai Chand, Ilaiah Kavati",
+    "venue": "International Conference on Computer Vision and Image Processing",
+    "publication": "CVIP 2020, pp. 237-248",
+    "date": "2020",
+    "summary": "A driverless-vehicle support framework that detects animals in dashcam video, checks lane obstruction, and tracks animal movement to reduce collision risk.",
+    "url": "https://arxiv.org/abs/2012.10878",
+    "tags": ["Computer Vision", "Autonomous Vehicles", "Collision Avoidance"]
+  },
+  {
+    "title": "TSCTNet: Traffic Signal and Countdown Timer Detection Network for Autonomous Vehicles",
+    "authors": "Dhananjai Chand, Savyasachi Gupta, Ilaiah Kavati",
+    "venue": "International Journal of Computer Information Systems and Industrial Management Applications",
+    "publication": "IJCISIM, Volume 13, pp. 182-191",
+    "date": "2021",
+    "summary": "A traffic signal and countdown timer detection framework for autonomous vehicles, combining Mask R-CNN object detection with image processing and RetinaNet-based timer recognition.",
+    "url": "https://www.mirlabs.org/ijcisim/regular_papers_2021/IJCISIM_17.pdf",
+    "tags": ["Computer Vision", "Autonomous Vehicles", "Traffic Signal Detection"]
+  }
+]

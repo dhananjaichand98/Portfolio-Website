@@ -4,6 +4,7 @@ import projects from "@/content/projects.json";
 import skills from "@/content/skills.json";
 import experience from "@/content/experience.json";
 import education from "@/content/education.json";
+import publications from "@/content/publications.json";
 import PortfolioPage from "@/components/PortfolioPage";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       projects={projects}
       skills={skills}
       experience={experience}
+      publications={publications}
       education={education}
     />
   );

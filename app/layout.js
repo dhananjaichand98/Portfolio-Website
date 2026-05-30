@@ -18,7 +18,7 @@ const bodyFont = Plus_Jakarta_Sans({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || site.siteUrl;
 const siteDescription =
-  "Frontend Software Engineer portfolio featuring projects, experience, and design-forward web work.";
+  "Dhananjai Chand is a frontend software engineer in New York building polished, accessible, and performant web experiences.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -60,20 +60,33 @@ export default function RootLayout({ children }) {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: profile.name,
-    jobTitle: profile.role,
-    email: profile.email,
-    sameAs: profile.socials
-      .map((social) => social.url)
-      .filter((url) => url.startsWith("http")),
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "New York",
-      addressRegion: "NY",
-      addressCountry: "US"
-    },
-    url: siteUrl
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        name: profile.name,
+        alternateName: site.siteName,
+        url: siteUrl
+      },
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        name: profile.name,
+        jobTitle: site.heroTagline,
+        email: profile.email,
+        image: `${siteUrl}${profile.photo}`,
+        sameAs: profile.socials
+          .map((social) => social.url)
+          .filter((url) => url.startsWith("http")),
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "New York",
+          addressRegion: "NY",
+          addressCountry: "US"
+        },
+        url: siteUrl
+      }
+    ]
   };
 
   return (
