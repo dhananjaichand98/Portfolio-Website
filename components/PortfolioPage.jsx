@@ -6,6 +6,7 @@ import TopNav from "@/components/TopNav";
 import ThemeBulbToggle from "@/components/ThemeBulbToggle";
 import AboutSection from "@/components/sections/AboutSection";
 import ContactSection from "@/components/sections/ContactSection";
+import EducationSection from "@/components/sections/EducationSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import HeroSection from "@/components/sections/HeroSection";
 import PersonalSection from "@/components/sections/PersonalSection";
@@ -80,7 +81,7 @@ export default function PortfolioPage({
   education
 }) {
   const [activeSection, setActiveSection] = useState("start");
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const formConfigured = useMemo(
     () => !site.formspreeEndpoint.includes("your-form-id"),
@@ -92,7 +93,7 @@ export default function PortfolioPage({
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("portfolio-theme");
-    const nextTheme = savedTheme === "dark" ? "dark" : "light";
+    const nextTheme = savedTheme === "light" ? "light" : "dark";
     setTheme(nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   }, []);
@@ -111,13 +112,26 @@ export default function PortfolioPage({
       <ThemeBulbToggle isDarkMode={theme === "dark"} onToggleTheme={toggleTheme} />
       <TopNav profileName={profile.name} navigation={site.navigation} activeSection={activeSection} />
 
-      <main id="top">
+      <main id="top" className="story-main">
         <HeroSection profile={profile} site={site} />
+        <div className="section-interlude interlude-origin" data-reveal>
+          <p>
+            I did not plan a straight line. I kept following the hard problems and built taste in
+            the process.
+          </p>
+        </div>
         <AboutSection profile={profile} />
         <ExperienceSection experience={experience} />
+        <div className="section-interlude interlude-cases" data-reveal>
+          <p>The interesting part of a project is the tradeoff you made when nobody was watching.</p>
+        </div>
         <ProjectsSection projects={projects} />
         <SkillsSection skills={skills} />
-        <PublicationsSection publications={publications} education={education} />
+        <PublicationsSection publications={publications} />
+        <EducationSection education={education} />
+        <div className="section-interlude interlude-personal" data-reveal>
+          <p>The human side is not extra context. It is the context.</p>
+        </div>
         <PersonalSection profile={profile} />
         <ContactSection profile={profile} site={site} formConfigured={formConfigured} />
       </main>

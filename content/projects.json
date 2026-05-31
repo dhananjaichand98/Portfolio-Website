@@ -74,5 +74,21 @@
     "status": "Nov 2017",
     "demoUrl": "#",
     "repoUrl": "#"
+  },
+  {
+    "title": "Portfolio Narrative Redesign",
+    "summary": "Rebuilt my portfolio as a story-first experience with modular content sections, theme persistence, and responsive narrative layouts tailored to real project context.",
+    "stack": ["Next.js", "React", "UI Architecture", "Content Design"],
+    "status": "May 2026",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Frontend Migration Playbook",
+    "summary": "Created migration-oriented UI patterns and implementation guides focused on reducing manual effort and helping teams ship consistent interfaces through staged rollouts.",
+    "stack": ["Design Systems", "Migration Strategy", "TypeScript", "Tooling"],
+    "status": "2025",
+    "demoUrl": "#",
+    "repoUrl": "#"
   }
 ]

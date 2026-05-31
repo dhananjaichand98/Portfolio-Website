@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" data-theme="dark" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body>
         {children}
 

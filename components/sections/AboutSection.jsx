@@ -22,6 +22,10 @@ export default function AboutSection({ profile }) {
           ))}
         </div>
       </div>
+
+      <p className="origin-ribbon" data-reveal>
+        Every role changed the domain. The underlying instinct stayed the same.
+      </p>
     </section>
   );
 }

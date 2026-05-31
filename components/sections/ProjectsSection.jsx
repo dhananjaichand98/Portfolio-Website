@@ -1,6 +1,13 @@
+"use client";
+
+import { useMemo, useState } from "react";
+
 export default function ProjectsSection({ projects }) {
-  const featuredProjects = projects.slice(0, 4);
-  const archivedProjects = projects.slice(4);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const featuredProjects = useMemo(() => projects.slice(0, 4), [projects]);
+  const additionalProjects = useMemo(() => projects.slice(4), [projects]);
+  const visibleProjects = isExpanded ? projects : featuredProjects;
 
   return (
     <section id="projects" className="content-section cases-section" aria-labelledby="projects-title">
@@ -10,11 +17,14 @@ export default function ProjectsSection({ projects }) {
       </div>
 
       <div className="case-grid">
-        {featuredProjects.map((project, index) => {
+        {visibleProjects.map((project, index) => {
           const hasSource = project.repoUrl && project.repoUrl !== "#";
+          const hasDemo = project.demoUrl && project.demoUrl !== "#";
+          const isExtended = index >= 4;
+          const cardClassName = isExtended ? "case-file case-file-extended" : "case-file";
 
           return (
-            <article className="case-file" key={project.title} data-reveal>
+            <article className={cardClassName} key={`${project.title}-${project.status}`}>
               <div className="case-number" aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
               </div>
@@ -39,6 +49,11 @@ export default function ProjectsSection({ projects }) {
                   <a href={project.repoUrl} target="_blank" rel="noreferrer">
                     Source
                   </a>
+                  {hasDemo ? (
+                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                      Demo
+                    </a>
+                  ) : null}
                 </div>
               ) : null}
             </article>
@@ -46,17 +61,17 @@ export default function ProjectsSection({ projects }) {
         })}
       </div>
 
-      {archivedProjects.length ? (
-        <div className="case-archive" data-reveal>
-          <p className="archive-label">Earlier experiments</p>
-          <ul>
-            {archivedProjects.map((project) => (
-              <li key={`${project.title}-${project.status}`}>
-                <span>{project.title}</span>
-                <small>{project.status}</small>
-              </li>
-            ))}
-          </ul>
+      {additionalProjects.length ? (
+        <div className="case-more-wrap">
+          <button
+            type="button"
+            className="case-more-button"
+            onClick={() => setIsExpanded((current) => !current)}
+          >
+            {isExpanded
+              ? "Show fewer projects"
+              : `See ${additionalProjects.length} more projects`}
+          </button>
         </div>
       ) : null}
     </section>

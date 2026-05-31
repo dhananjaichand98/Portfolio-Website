@@ -3,7 +3,7 @@
   "helloText": "Hey, I'm DC.",
   "location": "New York, NY (EST)",
   "email": "dcdevdhan@gmail.com",
-  "photo": "/assets/profile-photo.jpg",
+  "photo": "/assets/profile-photo.jpeg",
   "photoCaption": "A hiking photo because most of my best thinking happens away from a screen.",
   "intro": "I turn dense product systems into calm, dependable interfaces.",
   "thesis": "I build calm software for complicated rooms.",
@@ -19,20 +19,6 @@
     {
       "label": "Recurring pattern",
       "value": "Complexity into clarity"
-    }
-  ],
-  "photoSlots": [
-    {
-      "label": "Trail snapshot",
-      "detail": "Add a hiking photo that feels less posed and more in-motion."
-    },
-    {
-      "label": "Work surface",
-      "detail": "Add a desk, notebook, whiteboard, or setup photo."
-    },
-    {
-      "label": "Match day",
-      "detail": "Add something Tottenham, if you want the optimism on record."
     }
   ],
   "about": [

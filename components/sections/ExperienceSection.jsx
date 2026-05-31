@@ -22,6 +22,10 @@ export default function ExperienceSection({ experience }) {
                 {String(experience.length - index).padStart(2, "0")}
               </div>
 
+              <div className="chapter-route" aria-hidden="true">
+                <span />
+              </div>
+
               <div className="chapter-company">
                 {item.logo ? (
                   <img
@@ -39,7 +43,8 @@ export default function ExperienceSection({ experience }) {
                     <p className="chapter-company-name">{item.company}</p>
                     <p className="chapter-dates">{item.dates}</p>
                   </div>
-                  <p className="chapter-meta">{item.role} / {item.location}</p>
+                  <p className="chapter-meta">{item.role}</p>
+                  <p className="chapter-meta chapter-location">{item.location}</p>
                 </div>
               </div>
 
@@ -53,7 +58,7 @@ export default function ExperienceSection({ experience }) {
 
               {item.lesson ? (
                 <aside className="chapter-lesson">
-                  <span>Field note</span>
+                  <span>Chapter note</span>
                   <p>{item.lesson}</p>
                 </aside>
               ) : null}

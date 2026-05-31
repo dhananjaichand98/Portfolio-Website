@@ -12,6 +12,13 @@ export default function SkillsSection({ skills }) {
           migrations, fewer ambiguous states, and interfaces teams can keep improving.
         </p>
 
+        <article className="workbench-note workbench-note-secondary" data-reveal>
+          <p>
+            The throughline is reliability: predictable components, sensible defaults, and
+            debugging paths that are obvious at 2 AM.
+          </p>
+        </article>
+
         <div className="skills-grid">
           {skills.map((group) => (
             <article className="skills-card" key={group.category} data-reveal>

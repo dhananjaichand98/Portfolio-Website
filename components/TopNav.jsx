@@ -25,6 +25,13 @@ export default function TopNav({ profileName, navigation, activeSection }) {
         {profileName}
       </a>
 
+      <div className="nav-palette" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+
       <nav
         id="primary-navigation"
         className={isMenuOpen ? "is-open" : ""}

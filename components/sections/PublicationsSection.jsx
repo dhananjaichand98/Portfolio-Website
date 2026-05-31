@@ -14,7 +14,7 @@ function renderAuthors(authors) {
   ));
 }
 
-export default function PublicationsSection({ publications, education }) {
+export default function PublicationsSection({ publications }) {
   return (
     <section id="research" className="content-section research-section" aria-labelledby="research-title">
       <div className="section-heading" data-reveal>
@@ -59,16 +59,6 @@ export default function PublicationsSection({ publications, education }) {
                 </a>
               ) : null}
             </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="education-strip" data-reveal aria-label="Education">
-        {education.map((item) => (
-          <article className="education-card" key={`${item.school}-${item.dates}`}>
-            <span>{item.dates}</span>
-            <h3>{item.school}</h3>
-            <p>{item.degree}</p>
           </article>
         ))}
       </div>

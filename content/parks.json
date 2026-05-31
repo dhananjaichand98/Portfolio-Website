@@ -1,0 +1,127 @@
+[
+  {
+    "slug": "acadia",
+    "name": "Acadia National Park",
+    "location": "Maine, USA",
+    "cover": "/assets/profile-photo.jpeg",
+    "description": "Granite coastlines, fog, and the kind of horizon that slows your thoughts down.",
+    "photos": [
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Summit fog and first light."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Trail approach with coastal wind."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Granite textures and low clouds."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "A quiet overlook before the crowds."
+      }
+    ]
+  },
+  {
+    "slug": "yosemite",
+    "name": "Yosemite National Park",
+    "location": "California, USA",
+    "cover": "/assets/profile-photo-2.jpg",
+    "description": "Big stone, bigger scale, and camera rolls full of contrast.",
+    "photos": [
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Valley wall at golden hour."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Switchbacks and shadow lines."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Water and granite in the same frame."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Post-rain atmosphere."
+      }
+    ]
+  },
+  {
+    "slug": "channel-islands",
+    "name": "Channel Islands National Park",
+    "location": "California, USA",
+    "cover": "/assets/profile-photo.jpeg",
+    "description": "Cliff edges, island winds, and long ocean lines.",
+    "photos": [
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Cliff trail with open water."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Layered blues through haze."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Coastal textures up close."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Late-day shoreline light."
+      }
+    ]
+  },
+  {
+    "slug": "pinnacles",
+    "name": "Pinnacles National Park",
+    "location": "California, USA",
+    "cover": "/assets/profile-photo-2.jpg",
+    "description": "Sharp rock formations, cave trails, and dry-season color.",
+    "photos": [
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Jagged silhouettes at noon."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Trail dust and open sky."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Cave entrance contrast."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Desert tones near sunset."
+      }
+    ]
+  },
+  {
+    "slug": "zion",
+    "name": "Zion National Park",
+    "location": "Utah, USA",
+    "cover": "/assets/profile-photo.jpeg",
+    "description": "Vertical walls, river bends, and dramatic shifts in light.",
+    "photos": [
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Canyon light bands."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "River path and shadow."
+      },
+      {
+        "src": "/assets/profile-photo.jpeg",
+        "caption": "Warm stone at dusk."
+      },
+      {
+        "src": "/assets/profile-photo-2.jpg",
+        "caption": "Switchback lookback frame."
+      }
+    ]
+  }
+]
