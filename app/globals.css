@@ -47,20 +47,41 @@ html[data-theme="dark"] {
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  background-color: var(--bg);
+  background:
+    radial-gradient(circle at 8% 24%, rgba(239, 71, 111, 0.18), transparent 24rem),
+    radial-gradient(circle at 88% 10%, rgba(59, 130, 246, 0.14), transparent 26rem),
+    radial-gradient(circle at 78% 88%, rgba(20, 184, 166, 0.12), transparent 24rem),
+    linear-gradient(145deg, var(--bg), var(--bg-2)),
+    var(--bg);
+  background-attachment: fixed;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--font-body), "Helvetica Neue", "Segoe UI", sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 8% 24%, rgba(239, 71, 111, 0.18), transparent 24rem),
-    radial-gradient(circle at 88% 10%, rgba(59, 130, 246, 0.14), transparent 26rem),
-    radial-gradient(circle at 78% 88%, rgba(20, 184, 166, 0.12), transparent 24rem),
-    linear-gradient(145deg, var(--bg), var(--bg-2));
+  background: transparent;
   line-height: 1.58;
   overflow-x: clip;
+  position: relative;
+  isolation: isolate;
+}
+
+body::after {
+  content: "DC";
+  position: fixed;
+  right: -0.08em;
+  bottom: -0.28em;
+  z-index: 0;
+  color: rgba(59, 130, 246, 0.07);
+  font-family: var(--font-heading), "Avenir Next", sans-serif;
+  font-size: clamp(14rem, 31vw, 34rem);
+  font-weight: 900;
+  line-height: 0.8;
+  pointer-events: none;
 }
 
 a {
@@ -77,22 +98,10 @@ img {
   margin: 0 auto;
   padding-bottom: 2.5rem;
   position: relative;
+  z-index: 1;
 }
 
-.portfolio-shell::before {
-  content: "DC";
-  position: fixed;
-  right: -0.08em;
-  bottom: -0.28em;
-  z-index: -1;
-  color: rgba(59, 130, 246, 0.07);
-  font-family: var(--font-heading), "Avenir Next", sans-serif;
-  font-size: clamp(14rem, 31vw, 34rem);
-  font-weight: 900;
-  line-height: 0.8;
-}
-
-html[data-theme="dark"] .portfolio-shell::before {
+html[data-theme="dark"] body::after {
   color: rgba(96, 165, 250, 0.08);
 }
 
@@ -219,43 +228,6 @@ html[data-theme="dark"] .interlude-personal {
   box-shadow: 3px 3px 0 var(--acid);
 }
 
-.nav-palette {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.22rem;
-  margin-left: auto;
-  margin-right: 0.25rem;
-}
-
-.nav-palette span {
-  width: 0.65rem;
-  height: 1.8rem;
-  border: 1px solid #111111;
-  border-radius: 2px;
-  box-shadow: 3px 3px 0 rgba(17, 24, 39, 0.1);
-}
-
-.nav-palette span:nth-child(1) {
-  background: #3b82f6;
-}
-
-.nav-palette span:nth-child(2) {
-  background: #14b8a6;
-}
-
-.nav-palette span:nth-child(3) {
-  background: #ef476f;
-}
-
-.nav-palette span:nth-child(4) {
-  background: #f59e0b;
-}
-
-html[data-theme="dark"] .nav-palette span {
-  border-color: #94a3b8;
-  box-shadow: 3px 3px 0 rgba(2, 8, 23, 0.45);
-}
-
 .nav-list {
   margin: 0;
   padding: 0;
@@ -285,7 +257,6 @@ html[data-theme="dark"] .nav-palette span {
   background: var(--paper-ink);
   color: var(--panel);
   outline: none;
-  transform: rotate(-1deg);
 }
 
 .nav-toggle {
@@ -439,6 +410,17 @@ html[data-theme="dark"] .nav-palette span {
   gap: 2.2rem;
   align-items: start;
   isolation: isolate;
+}
+
+.field-hero::before {
+  content: "";
+  position: absolute;
+  inset: -3rem auto auto 42%;
+  z-index: -1;
+  width: min(42rem, 62vw);
+  height: min(42rem, 62vw);
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.22), transparent 68%);
+  pointer-events: none;
 }
 
 .field-hero::after {
@@ -1168,16 +1150,37 @@ html[data-theme="dark"] .chapter-card {
   cursor: pointer;
 }
 
-.workbench-layout {
-  margin-top: 1.6rem;
-  display: grid;
-  grid-template-columns: minmax(0, 0.38fr) minmax(0, 1.62fr);
-  grid-template-rows: auto auto;
-  gap: 1rem;
-  align-items: stretch;
+.workbench-section {
+  position: relative;
 }
 
-.workbench-note,
+.workbench-section::before {
+  content: "";
+  position: absolute;
+  inset: -2rem auto auto -8rem;
+  z-index: -1;
+  width: min(38rem, 60vw);
+  height: min(38rem, 60vw);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.2), transparent 68%);
+  pointer-events: none;
+}
+
+.workbench-layout {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(24rem, 1.12fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.workbench-letter {
+  border-left-color: var(--acid);
+}
+
+html[data-theme="dark"] .workbench-letter {
+  border-left-color: var(--acid);
+}
+
 .personal-note,
 .story-slot {
   margin: 0;
@@ -1195,43 +1198,54 @@ html[data-theme="dark"] .chapter-card {
   margin: 0;
 }
 
-.workbench-note-secondary {
-  border-top-color: var(--copper);
-}
-
-.workbench-note-secondary p {
-  margin: 0;
-}
-
 .skills-grid {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-content: start;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
-}
-
-.workbench-note {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.workbench-note-secondary {
-  grid-column: 1;
-  grid-row: 2;
+  align-content: start;
 }
 
 .skills-card {
   padding: 1rem;
+  border-top: 8px solid var(--acid);
+  box-shadow: 8px 8px 0 rgba(59, 130, 246, 0.2);
+  background: color-mix(in srgb, var(--panel) 92%, var(--acid) 8%);
 }
 
-.skills-card:nth-child(2) {
-  transform: rotate(1deg);
+.skills-card:nth-child(2n) {
+  border-top-color: var(--cyan);
 }
 
-.skills-card:nth-child(3) {
+.skills-card:nth-child(3n) {
+  border-top-color: var(--moss);
+}
+
+html[data-theme="dark"] .skills-card {
+  background:
+    linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(13, 35, 47, 0.95)),
+    radial-gradient(circle at 100% 0%, rgba(45, 212, 191, 0.14), transparent 20rem);
+  border-color: rgba(96, 165, 250, 0.28);
+}
+
+.workbench-ribbon {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.3rem 0 0;
+  padding: 0.42rem 0.66rem;
+  border: 2px solid #111827;
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 0.81rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
   transform: rotate(-1deg);
+}
+
+html[data-theme="dark"] .workbench-ribbon {
+  border-color: #2dd4bf;
+  background: #0f3a38;
+  color: #99f6e4;
 }
 
 .skills-card ul {
@@ -1727,16 +1741,10 @@ html[data-theme="dark"] .chapter-card {
     order: 2;
   }
 
-  .nav-palette {
-    order: 3;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   .top-nav nav {
     display: none;
     width: 100%;
-    order: 4;
+    order: 3;
   }
 
   .top-nav nav.is-open {

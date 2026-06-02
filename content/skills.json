@@ -14,5 +14,15 @@
   {
     "category": "Testing",
     "items": ["Jest", "React Testing Library", "Playwright", "Cypress", "Lighthouse"]
+  },
+  {
+    "category": "AI/ML",
+    "items": [
+      "Machine Learning",
+      "NLP",
+      "Computer Vision",
+      "Reinforcement Learning",
+      "Search Algorithms"
+    ]
   }
 ]
