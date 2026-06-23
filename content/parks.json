@@ -28,7 +28,7 @@
     "slug": "yosemite",
     "name": "Yosemite National Park",
     "location": "California, USA",
-    "cover": "/assets/profile-photo-2.jpg",
+    "cover": "/assets/parks/yosemite-valley.jpg",
     "description": "Big stone, bigger scale, and camera rolls full of contrast.",
     "photos": [
       {
@@ -53,7 +53,8 @@
     "slug": "channel-islands",
     "name": "Channel Islands National Park",
     "location": "California, USA",
-    "cover": "/assets/profile-photo.jpeg",
+    "cover": "/assets/parks/channel-islands-coast.jpg",
+    "coverPosition": "50% 58%",
     "description": "Cliff edges, island winds, and long ocean lines.",
     "photos": [
       {
@@ -78,7 +79,8 @@
     "slug": "pinnacles",
     "name": "Pinnacles National Park",
     "location": "California, USA",
-    "cover": "/assets/profile-photo-2.jpg",
+    "cover": "/assets/parks/pinnacles-cave.jpeg",
+    "coverPosition": "56% 45%",
     "description": "Sharp rock formations, cave trails, and dry-season color.",
     "photos": [
       {
@@ -103,7 +105,8 @@
     "slug": "zion",
     "name": "Zion National Park",
     "location": "Utah, USA",
-    "cover": "/assets/profile-photo.jpeg",
+    "cover": "/assets/parks/zion-canyon.jpeg",
+    "coverPosition": "56% 68%",
     "description": "Vertical walls, river bends, and dramatic shifts in light.",
     "photos": [
       {

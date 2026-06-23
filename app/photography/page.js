@@ -26,7 +26,11 @@ export default function PhotographyIndexPage() {
             <article className="park-card" key={park.slug}>
               <Link href={`/photography/${park.slug}`} className="park-card-link">
                 <div className="park-cover">
-                  <img src={park.cover} alt={`${park.name} cover`} />
+                  <img
+                    src={park.cover}
+                    alt={`${park.name} cover`}
+                    style={park.coverPosition ? { objectPosition: park.coverPosition } : undefined}
+                  />
                 </div>
                 <div className="park-meta">
                   <h2>{park.name}</h2>
