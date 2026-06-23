@@ -2,11 +2,11 @@ export default function HeroSection({ profile, site }) {
   return (
     <section id="start" className="hero field-hero" aria-labelledby="hero-title">
       <div className="hero-copy" data-reveal>
-        <p className="eyebrow">Personal notes from a software engineer</p>
+        <p className="eyebrow">Field notes from a software engineer</p>
         <h1 id="hero-title">{profile.thesis || profile.name}</h1>
         <p className="hero-intro">{profile.intro}</p>
         <p className="hero-role">{site.heroTagline}</p>
-        <p className="hero-subtitle">{site.heroSubtitle}</p>
+        {/* <p className="hero-subtitle">{site.heroSubtitle}</p> */}
 
         <div className="hero-actions">
           <a className="btn btn-primary" href={site.primaryCta.href}>
