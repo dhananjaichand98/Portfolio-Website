@@ -12,18 +12,6 @@
     "story": "Leading frontend migration work at HubSpot, I built TypeScript and Node.js codemods that moved 200+ apps to a modern UI library, cutting manual effort by 60% and saving about four months. I also improved a plugin-based ESLint workflow that surfaced migration guidance and deadlines, reducing tracking overhead and migration errors across teams."
   },
   {
-    "role": "Software Engineer",
-    "company": "Commure",
-    "location": "Mountain View, CA",
-    "dates": "Jul 2024 - Aug 2024",
-    "logo": "/assets/logos/commure.svg",
-    "logoAlt": "Commure logo",
-    "chapter": "Learning the cost of rough edges in healthcare",
-    "focus": "Full-stack product delivery, clinical workflows",
-    "lesson": "In healthcare tools, clarity is not polish. It is part of the work.",
-    "story": "At Commure, I owned full-stack delivery for a cloud-native EHR platform across React, FastAPI, and PostgreSQL. I shipped features like CPT autocomplete, provider profile management, note forwarding, and audit logs to improve documentation quality, traceability, and clinician onboarding speed."
-  },
-  {
     "role": "Software Engineer (P2)",
     "company": "Tesla",
     "location": "Fremont, CA",
@@ -32,8 +20,8 @@
     "logoAlt": "Tesla logo",
     "chapter": "Building interfaces for high-stakes coordination",
     "focus": "Global rollout, role-based workflows, multilingual UI",
-    "lesson": "A product used across 1000+ locations has to be boring in the best way: reliable, readable, and hard to derail.",
-    "story": "Tesla Watchlist became my core focus: I helped lead its global rollout to 1000+ locations used by 2500+ Security and HR stakeholders. I built the frontend architecture with React, TypeScript, Express, Webpack, and Redux, and delivered 10+ features, including role-based flows and multilingual support, driving strong QoQ adoption."
+    "lesson": "A product used across 1000+ locations has to be boring in the best way, which means reliable, readable, and hard to derail.",
+    "story": "Tesla Watchlist became my core focus, and I helped lead its global rollout to 1000+ locations used by 2500+ Security and HR stakeholders. I built the frontend architecture with React, TypeScript, Express, Webpack, and Redux, and delivered 10+ features, including role-based flows and multilingual support, driving strong QoQ adoption."
   },
   {
     "role": "Software Development Engineer III Intern",

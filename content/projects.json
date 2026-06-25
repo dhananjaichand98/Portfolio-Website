@@ -3,9 +3,9 @@
     "title": "Helping Hands",
     "angle": "The one about coordination and dignity.",
     "question": "How do you make support delivery easier without making the process feel cold?",
-    "summary": "Built a web app focused on making support delivery to people in need more seamless and accessible by automating key coordination flows.",
-    "lesson": "This is where I started thinking less about screens and more about the human handoff behind them.",
-    "stack": ["Web App", "Automation", "Social Impact"],
+    "summary": "Built a TrojanHacks web app for unhoused and low-income individuals in LA to find nearby shelters and charity events through SMS, so access did not depend on always having an internet connection. The system supported donor-created charity events, authority validation flows, map-based location views, and two-way Twilio messaging for registration and RSVPs.",
+    "lesson": "This is where I started thinking less about screens and more about the human handoff behind them: who needs help, who can offer it, and what the system has to coordinate between them.",
+    "stack": ["Python", "Flask", "MySQL", "Twilio", "Google Maps"],
     "status": "Nov 2021",
     "demoUrl": "#",
     "repoUrl": "https://github.com/dhananjaichand98/helping-hands"
@@ -25,8 +25,8 @@
     "title": "Support Systems for Driverless Cars",
     "angle": "The one that pulled research into the road.",
     "question": "What does a support system need to notice before the human does?",
-    "summary": "As part of my final-year B.Tech project, developed four AV support modules: pothole detection, traffic light signal/counter detection, potential vehicle-to-animal accident detection, and vehicular accident detection.",
-    "lesson": "It taught me to think in failure states: what needs to be noticed, when, and how clearly the system should respond.",
+    "summary": "As part of my final-year B.Tech project, I developed four AV support modules, including pothole detection, traffic light signal/counter detection, potential vehicle-to-animal accident detection, and vehicular accident detection.",
+    "lesson": "It taught me to think in failure states, including what needs to be noticed, when, and how clearly the system should respond.",
     "stack": ["Computer Vision", "Autonomous Vehicles", "Detection Systems"],
     "status": "Aug 2019 - Jun 2020",
     "demoUrl": "#",
@@ -45,7 +45,10 @@
   },
   {
     "title": "Computer Vision-based Accident Detection in Traffic Surveillance",
-    "summary": "Conducted extensive research and implementation to design an efficient accident-detection algorithm for traffic surveillance camera feeds.",
+    "angle": "The one where road footage became a signal problem.",
+    "question": "Can surveillance video detect a collision by reading how vehicles move before and after impact?",
+    "summary": "Designed a computer-vision framework for detecting road accidents in general traffic CCTV footage. The pipeline used Mask R-CNN for vehicle detection, centroid-based object tracking across frames, and speed plus trajectory anomaly analysis after vehicle overlap to estimate accident probability. I evaluated the approach across varied conditions including daylight, low visibility, rain, hail, and snow, with the goal of improving detection rate while keeping false alarms low.",
+    "lesson": "This project pushed me to think beyond object detection alone: the useful signal came from tracking motion, context, and abnormal behavior over time.",
     "stack": ["Computer Vision", "Research", "Traffic Surveillance"],
     "status": "Dec 2018 - Apr 2019",
     "demoUrl": "#",
@@ -72,22 +75,6 @@
     "summary": "Built a 3D version of a classic 2D shooter in Unity with C#, with Microsoft Azure SQL backend integration for high scores and leaderboards as part of Microsoft Code.Fun.Do Hackathon.",
     "stack": ["Unity 3D", "C#", "Azure SQL", "Game Development"],
     "status": "Nov 2017",
-    "demoUrl": "#",
-    "repoUrl": "#"
-  },
-  {
-    "title": "Portfolio Narrative Redesign",
-    "summary": "Rebuilt my portfolio as a story-first experience with modular content sections, theme persistence, and responsive narrative layouts tailored to real project context.",
-    "stack": ["Next.js", "React", "UI Architecture", "Content Design"],
-    "status": "May 2026",
-    "demoUrl": "#",
-    "repoUrl": "#"
-  },
-  {
-    "title": "Frontend Migration Playbook",
-    "summary": "Created migration-oriented UI patterns and implementation guides focused on reducing manual effort and helping teams ship consistent interfaces through staged rollouts.",
-    "stack": ["Design Systems", "Migration Strategy", "TypeScript", "Tooling"],
-    "status": "2025",
     "demoUrl": "#",
     "repoUrl": "#"
   }

@@ -9,7 +9,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import EducationSection from "@/components/sections/EducationSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import HeroSection from "@/components/sections/HeroSection";
-import PersonalSection from "@/components/sections/PersonalSection";
+// import PersonalSection from "@/components/sections/PersonalSection";
 import PublicationsSection from "@/components/sections/PublicationsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -18,10 +18,12 @@ function setupRevealObserver() {
   const items = Array.from(document.querySelectorAll("[data-reveal]"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (reduceMotion) {
+  if (reduceMotion || !("IntersectionObserver" in window)) {
     items.forEach((item) => item.classList.add("is-visible"));
     return () => {};
   }
+
+  document.documentElement.classList.add("reveal-enabled");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -38,23 +40,50 @@ function setupRevealObserver() {
     }
   );
 
-  items.forEach((item) => observer.observe(item));
-  return () => observer.disconnect();
+  items.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isInView) {
+      item.classList.add("is-visible");
+    } else {
+      observer.observe(item);
+    }
+  });
+
+  return () => {
+    observer.disconnect();
+    document.documentElement.classList.remove("reveal-enabled");
+  };
 }
 
-function setupActiveSectionObserver(setActiveSection) {
-  const sections = Array.from(document.querySelectorAll("section[id]"));
+function setupActiveSectionObserver(setActiveSection, navigation) {
+  const navSectionIds = navigation
+    .map((item) => item.href.replace("#", ""))
+    .filter(Boolean);
+  const getSections = () =>
+    navSectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
   const updateActiveSection = () => {
-    const readingLine = Math.min(window.innerHeight * 0.68, 520);
-    const currentSection =
-      sections
-        .map((section) => ({
-          id: section.id,
-          distance: section.getBoundingClientRect().top - readingLine
-        }))
-        .filter((section) => section.distance <= 0)
-        .sort((a, b) => b.distance - a.distance)[0] || sections[0];
+    const sections = getSections();
+    const navBottom = document.querySelector(".top-nav")?.getBoundingClientRect().bottom ?? 0;
+    const readingLine = navBottom + 72;
+    const sectionPositions = sections.map((section) => {
+      const rect = section.getBoundingClientRect();
+
+      return {
+        id: section.id,
+        top: rect.top
+      };
+    });
+    const previousSections = sectionPositions.filter((section) => section.top <= readingLine);
+    const isAtPageEnd =
+      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    const currentSection = isAtPageEnd
+      ? sectionPositions[sectionPositions.length - 1]
+      : previousSections[previousSections.length - 1] || sectionPositions[0];
 
     if (currentSection?.id) {
       setActiveSection(currentSection.id);
@@ -89,7 +118,7 @@ export default function PortfolioPage({
   );
 
   useEffect(() => setupRevealObserver(), []);
-  useEffect(() => setupActiveSectionObserver(setActiveSection), []);
+  useEffect(() => setupActiveSectionObserver(setActiveSection, site.navigation), [site.navigation]);
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("portfolio-theme");
@@ -129,10 +158,10 @@ export default function PortfolioPage({
         <SkillsSection skills={skills} />
         <PublicationsSection publications={publications} />
         <EducationSection education={education} />
-        <div className="section-interlude interlude-personal" data-reveal>
+        {/* <div className="section-interlude interlude-personal" data-reveal>
           <p>The human side is not extra context. It is the context.</p>
         </div>
-        <PersonalSection profile={profile} />
+        <PersonalSection profile={profile} /> */}
         <ContactSection profile={profile} site={site} formConfigured={formConfigured} />
       </main>
 

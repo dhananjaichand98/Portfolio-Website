@@ -15,9 +15,6 @@ export default function HeroSection({ profile, site }) {
           <a className="btn btn-secondary" href={site.secondaryCta.href}>
             {site.secondaryCta.label}
           </a>
-          <a className="btn btn-tertiary" href="/photography">
-            Park Photography
-          </a>
         </div>
 
         <ul className="social-list hero-links" aria-label="Social links">
@@ -52,7 +49,6 @@ export default function HeroSection({ profile, site }) {
         <figure className="hero-photo">
           <img src={profile.photo} alt={`${profile.name} profile portrait`} />
           <figcaption>
-            <span>{profile.location}</span>
             <p>{profile.photoCaption}</p>
           </figcaption>
         </figure>

@@ -6,7 +6,7 @@
   "photo": "/assets/profile-photo.jpeg",
   "photoCaption": "A hiking photo because most of my best thinking happens away from a screen.",
   "intro": "I turn dense product systems into calm, dependable interfaces.",
-  "thesis": "Hey, I'm DC! 👋",
+  "thesis": "I build calm software for complicated rooms.",
   "signals": [
     {
       "label": "Current chapter",
@@ -22,9 +22,9 @@
     }
   ],
   "about": [
-    "The thread through my work is pretty consistent: I like walking into complicated systems, finding the shape underneath the mess, and making the next person feel less friction than I did.",
-    "That has taken a few forms: migration tooling at HubSpot, security workflows at Tesla, healthcare product work at Commure, design systems at Walmart, CPQ flows at Salesforce, and earlier research in computer vision. Different domains, same instinct.",
-    "I care about software that feels thoughtful in the small moments: clearer states, fewer confusing paths, better defaults, sharper feedback, and codebases that give teams room to move."
+    "The thread through my work is pretty consistent, and I like walking into complicated systems, finding the shape underneath the mess, and making the next person feel less friction than I did.",
+    "That has taken a few forms, including migration tooling at HubSpot, security workflows at Tesla, design systems at Walmart, CPQ flows at Salesforce, and earlier research in computer vision. Different domains, same instinct.",
+    "I care about software that feels thoughtful in the small moments, where clearer states, fewer confusing paths, better defaults, sharper feedback, and codebases give teams room to move."
   ],
   "principles": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "title": "Leave better trails",
-      "detail": "Docs, codemods, component stories, lint rules, and dashboards are all part of the same habit: help the next person move faster."
+      "detail": "Docs, codemods, component stories, lint rules, and dashboards are all part of the same habit, which is to help the next person move faster."
     }
   ],
   "socials": [

@@ -1,14 +1,14 @@
 {
   "siteName": "Dhananjai Chand | Frontend Software Engineer",
   "siteUrl": "https://dhananjaichand.com",
-  "heroTagline": "I'm a frontend engineer at HubSpot with a systems brain.",
+  "heroTagline": "I'm DC, a frontend engineer at HubSpot with a systems brain.",
   "heroSubtitle": "I turn tangled product systems into interfaces, migrations, and team workflows that feel calm under pressure.",
   "primaryCta": {
     "label": "Enter the Notes",
     "href": "#story"
   },
   "secondaryCta": {
-    "label": "Open Channel",
+    "label": "Contact",
     "href": "#contact"
   },
   "resumeUrl": "/assets/dhananjai-chand-resume.pdf",
@@ -39,8 +39,8 @@
       "href": "#research"
     },
     {
-      "label": "Offscreen",
-      "href": "#personal"
+      "label": "Education",
+      "href": "#education"
     },
     {
       "label": "Contact",

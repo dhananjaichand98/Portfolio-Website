@@ -26,7 +26,7 @@ export default function PersonalSection({ profile }) {
         <div className="story-slot" data-reveal>
           <span>Open story slot</span>
           <p>
-            This is where I would add one short, specific anecdote: a trail you remember, a game
+            This is where I would add one short, specific anecdote, maybe a trail you remember, a game
             that shaped your taste, a match you watched, or a tiny personal ritual before shipping.
           </p>
         </div>

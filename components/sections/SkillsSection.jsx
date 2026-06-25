@@ -9,11 +9,11 @@ export default function SkillsSection({ skills }) {
       <div className="workbench-layout">
         <div className="origin-letter workbench-letter" data-reveal>
           <p>
-            I use tools as leverage for clearer product behavior: faster feedback loops, better
+            I use tools as leverage for clearer product behavior, where faster feedback loops, better
             migrations, fewer ambiguous states, and interfaces teams can keep improving.
           </p>
           <p>
-            The throughline is reliability: predictable components, sensible defaults, and
+            The throughline is reliability, with predictable components, sensible defaults, and
             debugging paths that are obvious at 2 AM.
           </p>
           <p>
@@ -42,7 +42,7 @@ export default function SkillsSection({ skills }) {
       </div>
 
       <p className="workbench-ribbon" data-reveal>
-        Different tools, same instinct: make complexity easier to use.
+        Different tools, same instinct, which is to make complexity easier to use.
       </p>
     </section>
   );

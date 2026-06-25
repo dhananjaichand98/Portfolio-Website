@@ -15,56 +15,66 @@ export default function ExperienceSection({ experience }) {
       </div>
 
       <ol className="chapter-list">
-        {experience.map((item, index) => (
-          <li className="chapter-item" key={`${item.role}-${item.company}-${item.dates}`}>
-            <article className="chapter-card" data-reveal>
-              <div className="chapter-index" aria-hidden="true">
-                {String(experience.length - index).padStart(2, "0")}
-              </div>
+        {experience.map((item, index) => {
+          const hasNextChapter = index < experience.length - 1;
 
-              <div className="chapter-route" aria-hidden="true">
-                <span />
-              </div>
-
-              <div className="chapter-company">
-                {item.logo ? (
-                  <img
-                    className="chapter-logo"
-                    src={item.logo}
-                    alt={item.logoAlt || `${item.company} logo`}
-                  />
-                ) : (
-                  <div className="chapter-logo-fallback" aria-hidden="true">
-                    {initialsFromCompany(item.company)}
-                  </div>
-                )}
-                <div className="chapter-company-info">
-                  <div className="chapter-company-top">
-                    <p className="chapter-company-name">{item.company}</p>
-                    <p className="chapter-dates">{item.dates}</p>
-                  </div>
-                  <p className="chapter-meta">{item.role}</p>
-                  <p className="chapter-meta chapter-location">{item.location}</p>
+          return (
+            <li className="chapter-item" key={`${item.role}-${item.company}-${item.dates}`}>
+              <article className="chapter-card" data-reveal>
+                <div className="chapter-index" aria-hidden="true">
+                  {String(experience.length - index).padStart(2, "0")}
                 </div>
-              </div>
 
-              <div className="chapter-body">
-                <h3>{item.chapter || item.role}</h3>
-                {item.focus ? <p className="chapter-focus">{item.focus}</p> : null}
-                <p className="chapter-story">
-                  {item.story || (item.highlights ? item.highlights.join(" ") : "")}
-                </p>
-              </div>
+                <div className="chapter-route" aria-hidden="true">
+                  <span />
+                </div>
 
-              {item.lesson ? (
-                <aside className="chapter-lesson">
-                  <span>Chapter note</span>
-                  <p>{item.lesson}</p>
-                </aside>
+                <div className="chapter-company">
+                  {item.logo ? (
+                    <img
+                      className="chapter-logo"
+                      src={item.logo}
+                      alt={item.logoAlt || `${item.company} logo`}
+                    />
+                  ) : (
+                    <div className="chapter-logo-fallback" aria-hidden="true">
+                      {initialsFromCompany(item.company)}
+                    </div>
+                  )}
+                  <div className="chapter-company-info">
+                    <div className="chapter-company-top">
+                      <p className="chapter-company-name">{item.company}</p>
+                      <p className="chapter-dates">{item.dates}</p>
+                    </div>
+                    <p className="chapter-meta">{item.role}</p>
+                    <p className="chapter-meta chapter-location">{item.location}</p>
+                  </div>
+                </div>
+
+                <div className="chapter-body">
+                  <h3>{item.chapter || item.role}</h3>
+                  {item.focus ? <p className="chapter-focus">{item.focus}</p> : null}
+                  <p className="chapter-story">
+                    {item.story || (item.highlights ? item.highlights.join(" ") : "")}
+                  </p>
+                </div>
+
+                {item.lesson ? (
+                  <aside className="chapter-lesson">
+                    <span>Chapter note</span>
+                    <p>{item.lesson}</p>
+                  </aside>
+                ) : null}
+              </article>
+
+              {hasNextChapter ? (
+                <div className="chapter-mobile-route" aria-hidden="true">
+                  <span />
+                </div>
               ) : null}
-            </article>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ol>
     </section>
   );
