@@ -313,23 +313,23 @@ html[data-theme="dark"] .interlude-personal {
 }
 
 .bulb-cord {
-  width: 2px;
-  height: calc(3rem + var(--pull-offset));
+  width: 3px;
+  height: calc(3.55rem + var(--pull-offset));
   background: color-mix(in srgb, var(--ink) 62%, transparent);
   transition: height 0.24s ease;
 }
 
 .bulb-knob {
-  width: 0.28rem;
-  height: 0.28rem;
+  width: 0.36rem;
+  height: 0.36rem;
   border-radius: 999px;
   background: color-mix(in srgb, var(--ink) 62%, transparent);
   margin-top: -1px;
 }
 
 .bulb-wrap {
-  width: 2rem;
-  height: 2rem;
+  width: 2.45rem;
+  height: 2.45rem;
   position: relative;
   margin-top: 0.02rem;
   transform-origin: top center;
@@ -339,7 +339,7 @@ html[data-theme="dark"] .interlude-personal {
 
 .bulb-glow {
   position: absolute;
-  inset: -0.85rem;
+  inset: -1.05rem;
   border-radius: 999px;
   background: radial-gradient(circle, rgba(245, 158, 11, 0.45), transparent 68%);
   opacity: 0;
@@ -1896,12 +1896,12 @@ html.reveal-enabled [data-reveal].is-visible,
 
   .theme-pull {
     right: 0.55rem;
-    height: 6rem;
+    height: 6.65rem;
     opacity: 0.82;
   }
 
   .bulb-cord {
-    height: calc(2.45rem + var(--pull-offset));
+    height: calc(2.85rem + var(--pull-offset));
   }
 
   .field-hero {
